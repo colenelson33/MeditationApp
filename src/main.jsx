@@ -4,6 +4,9 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // Setup
 
+import MoonImage from './assets/moon.jpg'
+import SunImage from './assets/sun.jpeg'
+
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -73,7 +76,7 @@ scene.background = spaceTexture;
 
 // Moon
 
-const sunTexture = new THREE.TextureLoader().load('./src/assets/sun.jpeg');
+const sunTexture = new THREE.TextureLoader().load(SunImage);
 const sun = new THREE.Mesh(
   new THREE.SphereGeometry(25, 32, 32),
   new THREE.MeshStandardMaterial({
@@ -85,7 +88,7 @@ sun.position.z = -550
 sun.position.setX(200);
 
 
-const moonTexture = new THREE.TextureLoader().load('./src/assets/moon.jpg');
+const moonTexture = new THREE.TextureLoader().load(MoonImage);
 const normalTexture = new THREE.TextureLoader().load('./src/assets/normal.jpg');
 
 
