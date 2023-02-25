@@ -6,6 +6,10 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 import MoonImage from './assets/moon.jpg'
 import SunImage from './assets/sun.jpeg'
+import SpaceImage from './assets/space.jpeg'
+import EarthImage from './assets/earth.jpeg'
+import EarthTexture from './assets/earthNormal.jpg'
+import NormalTexture from './assets/normal.jpg'
 
 const scene = new THREE.Scene();
 
@@ -63,7 +67,7 @@ Array(3000).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('./src/assets/space.jpeg');
+const spaceTexture = new THREE.TextureLoader().load(SpaceImage);
 scene.background = spaceTexture;
 
 // Avatar
@@ -89,13 +93,13 @@ sun.position.setX(200);
 
 
 const moonTexture = new THREE.TextureLoader().load(MoonImage);
-const normalTexture = new THREE.TextureLoader().load('./src/assets/normal.jpg');
+const normalTexture = new THREE.TextureLoader().load(NormalTexture);
 
 
 
 
-const earthTexture = new THREE.TextureLoader().load('./src/assets/earth.jpeg');
-const normalEarthTexture = new THREE.TextureLoader().load('./src/assets/earthNormal.jpg');
+const earthTexture = new THREE.TextureLoader().load(EarthImage);
+const normalEarthTexture = new THREE.TextureLoader().load(EarthTexture);
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(7, 32, 32),
   new THREE.MeshStandardMaterial({
