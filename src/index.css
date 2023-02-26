@@ -6,6 +6,20 @@ canvas {
   left: 0;
 }
 
+/* Laptop screen size */
+
+/* IPhone screen size */
+@media screen and (max-width: 500px){
+  p{
+    color: rgb(255, 255, 255);
+    font-size: .75rem;
+  }
+  h1, h2, h3, blockquote {
+    font-size: 1rem;
+  }
+}
+
+
 
 :root {
   --dark-bg: rgba(15, 15, 15, 0.75);
