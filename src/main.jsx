@@ -20,7 +20,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth, window.innerHeight+200);
 camera.position.setZ(30);
 camera.position.setX(-3);
 
@@ -90,6 +90,7 @@ const sun = new THREE.Mesh(
 scene.add(sun)
 sun.position.z = -550
 sun.position.setX(200);
+sun.position.setY(50)
 
 
 const moonTexture = new THREE.TextureLoader().load(MoonImage);
