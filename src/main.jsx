@@ -111,6 +111,7 @@ const earth = new THREE.Mesh(
 sun.add(earth)
 earth.position.z = 450
 earth.position.setX(25);
+sun.position.setY(50)
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -124,6 +125,7 @@ earth.add(moon);
 
 moon.position.z = -15
 moon.position.setX(15);
+sun.position.setY(50)
 
 //jeff.position.z = -5;
 //jeff.position.x = 2;
